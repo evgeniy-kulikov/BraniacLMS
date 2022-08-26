@@ -9,6 +9,8 @@ main.py
 config/
 mainapp/
 venv/
+manage.py
+reaquirements.txt
 
 
 # C extensions
