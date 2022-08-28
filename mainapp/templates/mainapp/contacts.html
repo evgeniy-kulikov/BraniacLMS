@@ -1,11 +1,12 @@
-
 <!--шаблон head + body-->
 {% extends 'base.html' %}
+
+<!--модуль с новым фильтром-->
+{% load email_to_link %}
 
 <!--   Контент страницы   -->
 {% block content %}
 
-<!--    <div class="container-md">-->
 
 <p>
 <div class="jumbotron jumbotron-fluid">
@@ -30,7 +31,7 @@
         </ul>
         <ul class="list-unstyled">
           <li>Email</li>
-          <li><strong>geeklab@spb.ru</strong></li>
+          <li><strong>{{ 'geeklab@spb.ru'|email_to_link }}</strong></li>
         </ul>
         <ul class="list-unstyled">
           <li>Адрес</li>
@@ -53,7 +54,7 @@
         </ul>
         <ul class="list-unstyled">
           <li>Email</li>
-          <li><strong>geeklab@kz.ru</strong></li>
+          <li><strong>{{ 'geeklab@spb.ru'|email_to_link }}</strong></li>
         </ul>
         <ul class="list-unstyled">
           <li>Адрес</li>
@@ -76,7 +77,7 @@
         </ul>
         <ul class="list-unstyled">
           <li>Email</li>
-          <li><strong>geeklab@msk.ru</strong></li>
+          <li><strong>{{ 'geeklab@spb.ru'|email_to_link }}</strong></li>
         </ul>
         <ul class="list-unstyled">
           <li>Адрес</li>
@@ -90,74 +91,11 @@
 </div>
 </p>
 
-
-
     </div>
-
-
-
 
 
     <!-- Footer -->
 
-    <div class="container-lg mt-auto">
-        <hr>
-        <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-3 text-center">
-                <p>
-                    <strong>Braniac</strong>
-                </p>
-                <p>
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Домашняя</a></li>
-                    <li><a href="news.html">Новости</a></li>
-                    <li><a href="login.html">Войти</a></li>
-                </ul>
-                </p>
-            </div>
-            <div class="col-sm-6 col-md-3 text-center">
-                <p>
-                    <strong>Полезное</strong>
-                </p>
-                <p>
-                <ul class="list-unstyled">
-                    <li><a href="#">Положения &amp; Условия</a></li>
-                    <li><a href="#">Конфиденциальность &amp; Cookies</a></li>
-                    <li><a href="#">Документация по API</a></li>
-                    <li><a href="doc_site.html">Документация по сайту</a></li>
-                </ul>
-                </p>
-            </div>
-            <div class="col-sm-6 col-md-3 text-center">
-                <p>
-                    <strong>Мы в социальных сетях</strong>
-                </p>
-                <p>
-                <div class="row justify-content-around">
-                    <div><a href="#"><i class="fab fa-vk fa-2x"></i></a></div>
-                    <div><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></div>
-                    <div><a href="#"><i class="fab fa-instagram fa-2x"></i></a></div>
-                    <div><a href="#"><i class="fab fa-pinterest-p fa-2x"></i></a></div>
-                </div>
-                </p>
-                <p>
-                    <strong>Наше приложение</strong>
-                </p>
-                <p>
-                <div class="row justify-content-around">
-                    <div><a href="#"><i class="fab fa-app-store fa-2x"></i></a></div>
-                    <div><a href="#"><i class="fab fa-google-play fa-2x"></i></a></div>
-                    <div><a href="#"><i class="fab fa-windows fa-2x"></i></a></div>
-                </div>
-                </p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div>
-                <p><small>&copy; GeekBrains 2021</small></p>
-            </div>
-        </div>
-    </div>
 
 {% endblock content %}
 

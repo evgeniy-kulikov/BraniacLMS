@@ -1,9 +1,6 @@
 # from django.http import HttpResponse
 # from django.shortcuts import render
-#
-# # Первоначальные страницы
-#
-# # Create your views here.
+
 # # Использование функции
 # # def hello_world(request):
 # #     return HttpResponse("Hello world")
@@ -15,10 +12,10 @@
 #     def get(self, *args):
 #         return HttpResponse("Hello world")
 #
-#
 # def check_kwargs(request, **kwargs):
 #     return HttpResponse(f"kwargs:<br>{kwargs}")
 
+from datetime import datetime
 from django.views.generic import TemplateView
 
 
@@ -32,10 +29,11 @@ class NewsPageView(TemplateView):
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
-        # Create your own data
+        # Create your own data (собственные переменные проекта)
         context["news_title"] = "Громкий новостной заголовок"
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
         context["range"] = range(5)
+        context["datetime_obj"] = datetime.now()
         return context
 
 
