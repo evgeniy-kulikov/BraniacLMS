@@ -26,6 +26,18 @@
       </div>
     </div>
     {% endfor %}
+
+<!--  Новостные колонки json -->
+    {% for item in news_data %}
+    <div class="card my-2">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ datetime_obj|date:"Y-m-d - h-m-s" }}</h6>
+        <p class="card-text">{{ item.preview }}</p>
+        <a href="#" class="card-link">Подробнее</a>
+      </div>
+    </div>
+    {% endfor %}
     
 
   </div>
@@ -67,7 +79,7 @@
 <!--   Передача параметров через адрес   -->
       <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 1 %}">1</a></li>
       <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' page=2 %}">2</a></li>
-      <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 3 %}">3</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 3 %}?param1=foobar">3</a></li>
 <!--   Ошибка обращения к переменной, которой нет в контексте   -->
       {# <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' four %}">4</a></li> #}
       <li class="page-item"><a class="page-link" href="#">Next</a></li>
@@ -76,17 +88,6 @@
 </div>
 
 
-<!--<div class="row justify-content-center align-items-center mt-3 mb-n3">-->
-<!--  <nav aria-label="Page navigation example">-->
-<!--    <ul class="pagination">-->
-<!--      <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
-<!--      <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-<!--      <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-<!--      <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-<!--      <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
-<!--    </ul>-->
-<!--  </nav>-->
-<!--</div>-->
 
 {% endwith %}
 {% endblock content %}

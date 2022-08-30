@@ -14,9 +14,14 @@
 #
 # def check_kwargs(request, **kwargs):
 #     return HttpResponse(f"kwargs:<br>{kwargs}")
-
+import json
+import os
 from datetime import datetime
 from django.views.generic import TemplateView
+
+from config.settings import BASE_DIR
+
+file_ = open(os.path.join(BASE_DIR, 'mainapp/news.json'))
 
 
 class MainPageView(TemplateView):
@@ -34,6 +39,11 @@ class NewsPageView(TemplateView):
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
         context["range"] = range(5)
         context["datetime_obj"] = datetime.now()
+
+        context["params"] = ['django', 'python']
+        with file_:
+            news_data = json.load(file_)
+            context["news_data"] = news_data
         return context
 
 
