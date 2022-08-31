@@ -25,9 +25,15 @@ class News(models.Model):
         self.save()
 
 
+class CoursesManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
+
+
 # Связь "один ко многим" к одному курсу — множество уроков.
 # Он реализуется через поле типа models.ForeignKey
 class Courses(models.Model):
+    objects = CoursesManager()
     name = models.CharField(max_length=256, verbose_name="Name")
     description = models.TextField(verbose_name="Description", blank=True, null=True)
     description_as_markdown = models.BooleanField(verbose_name="As markdown", default=False)
