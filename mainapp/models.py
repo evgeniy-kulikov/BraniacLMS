@@ -1,12 +1,18 @@
 from django.db import models
 
+
+# Автоматическая фильтрация удалённых объектов
+class OjectDelManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
+
 # "News" - текущий класс модели наследуется от класса models.Model,
 # который определяет основное поведение моделей в рамках Django ORM.
 # В модуле models также есть набор классов, который позволяет задать типы полей.
 
 
 class News(models.Model):
-
+    objects = OjectDelManager()
     title = models.CharField(max_length=256, verbose_name="Title")
     preambule = models.CharField(max_length=1024, verbose_name="Preambule")
     body = models.TextField(blank=True, null=True, verbose_name="Body")
@@ -25,15 +31,10 @@ class News(models.Model):
         self.save()
 
 
-class CoursesManager(models.Manager):
-    def get_queryset(self):
-        return super().get_queryset().filter(deleted=False)
-
-
 # Связь "один ко многим" к одному курсу — множество уроков.
 # Он реализуется через поле типа models.ForeignKey
 class Courses(models.Model):
-    objects = CoursesManager()
+    objects = OjectDelManager()
     name = models.CharField(max_length=256, verbose_name="Name")
     description = models.TextField(verbose_name="Description", blank=True, null=True)
     description_as_markdown = models.BooleanField(verbose_name="As markdown", default=False)
