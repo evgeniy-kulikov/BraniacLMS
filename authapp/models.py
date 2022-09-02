@@ -1,8 +1,6 @@
-# from django.db import models
-# Create your models here.
-
 from pathlib import Path
 from time import time
+
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin, UserManager
 from django.contrib.auth.validators import ASCIIUsernameValidator
