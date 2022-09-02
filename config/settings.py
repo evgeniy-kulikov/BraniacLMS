@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "markdownify.apps.MarkdownifyConfig",
     "mainapp",
+    "authapp",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+# Media files
+# Переменная MEDIA_URL указывает, по какому адресу находятся медиафайлы для загрузки.
+# Этот путь дополнительно указывается в настройках веб-сервера.
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+# Подключаем новую модель пользователей
+AUTH_USER_MODEL = "authapp.CustomUser"
+
+# Указываем, куда перенаправлять пользователя при входе на сайт и выходе с него
+LOGIN_REDIRECT_URL = "mainapp:main_page"
+LOGOUT_REDIRECT_URL = "mainapp:main_page"
