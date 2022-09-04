@@ -1,17 +1,11 @@
+# my manual
+main.py
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# my manual
-main.py
-.idea/
-config/
-mainapp/
-venv/
-manage.py
-reaquirements.txt
-
 
 # C extensions
 *.so
