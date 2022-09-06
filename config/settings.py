@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "social_django",
     "mainapp",
     "authapp",
+    "crispy_forms",
     # "admin_interface",
 ]
 
@@ -162,3 +163,4 @@ SOCIAL_AUTH_GITHUB_SECRET = "ae0f4ba2df322cadb3e083a43ba8f4b279cf4e45"
 # X_FRAME_OPTIONS = "SAMEORIGIN"
 # SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
