@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 # Автоматическая фильтрация удалённых объектов
@@ -22,6 +23,7 @@ class News(models.Model):
     deleted = models.BooleanField(default=False)
 
     # метод отвечет вид объекта (строковое представление объектов ) при печати "первичный ключ" "заголовок"
+    # так будет отображаться список и в админке
     def __str__(self) -> str:
         return f"{self.pk} {self.title}"
 
@@ -29,6 +31,13 @@ class News(models.Model):
     def delete(self, *args):
         self.deleted = True
         self.save()
+
+    # Корректировка отображения названия списка, относящегося к объектам модели, в административном разделе
+    # Убираем в названии множественное число ("Newss" -> "News")
+    class Meta:
+        verbose_name = _("News")
+        verbose_name_plural = _("News")
+        ordering = ("-created",)  # сортировка (дата создания) по убыванию. Сначала свежее
 
 
 # Связь "один ко многим" к одному курсу — множество уроков.
@@ -70,9 +79,10 @@ class Lesson(models.Model):
         self.deleted = True
         self.save()
 
-    # Сортировка сначала по "course" а затем по "num"
     class Meta:
-        ordering = ("course", "num")
+        ordering = ("course", "num")  # Сортировка сначала по "course" а затем по "num"
+        verbose_name = _("Lesson")
+        verbose_name_plural = _("Lessons")
 
 
 # Связь "многие ко многим" - models.ManyToManyField(Courses)
