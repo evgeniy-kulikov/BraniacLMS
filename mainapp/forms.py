@@ -12,13 +12,12 @@ class CourseFeedbackForm(forms.ModelForm):
             self.fields["user"].initial = user.pk
         return ret
 
-
 # HiddenInput() - скрытое поле: у юзера не должно быть прав на редактирование его
-class Meta:
-    model = mainapp_models.CourseFeedback
-    fields = ("course", "user", "feedback", "rating")
-    widgets = {
-        "course": forms.HiddenInput(),
-        "user": forms.HiddenInput(),
-        "rating": forms.RadioSelect(),
-    }
+    class Meta:
+        model = mainapp_models.CourseFeedback
+        fields = ("course", "user", "feedback", "rating")
+        widgets = {
+            "course": forms.HiddenInput(),
+            "user": forms.HiddenInput(),
+            "rating": forms.RadioSelect(),
+        }
