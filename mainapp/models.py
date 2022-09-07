@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -7,11 +8,10 @@ class OjectDelManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
 
+
 # "News" - текущий класс модели наследуется от класса models.Model,
 # который определяет основное поведение моделей в рамках Django ORM.
 # В модуле models также есть набор классов, который позволяет задать типы полей.
-
-
 class News(models.Model):
     objects = OjectDelManager()
     title = models.CharField(max_length=256, verbose_name="Title")
@@ -40,10 +40,16 @@ class News(models.Model):
         ordering = ("-created",)  # сортировка (дата создания) по убыванию. Сначала свежее
 
 
+class CoursesManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
+
+
 # Связь "один ко многим" к одному курсу — множество уроков.
 # Он реализуется через поле типа models.ForeignKey
 class Courses(models.Model):
-    objects = OjectDelManager()
+    objects = CoursesManager()
+
     name = models.CharField(max_length=256, verbose_name="Name")
     description = models.TextField(verbose_name="Description", blank=True, null=True)
     description_as_markdown = models.BooleanField(verbose_name="As markdown", default=False)
@@ -99,3 +105,18 @@ class CourseTeachers(models.Model):
     def delete(self, *args):
         self.deleted = True
         self.save()
+
+
+# Модель отзывов "Feedback"
+class CourseFeedback(models.Model):
+    # "RATING" константа для данной модели
+    RATING = ((5, "⭐⭐⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (3, "⭐⭐⭐"), (2, "⭐⭐"), (1, "⭐"))
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE, verbose_name=_("Course"))
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name=_("User"))
+    feedback = models.TextField(default=_("No feedback"), verbose_name=_("Feedback"))
+    rating = models.SmallIntegerField(choices=RATING, default=5, verbose_name=_("Rating"))
+    created = models.DateTimeField(auto_now_add=True, verbose_name="Created")
+    deleted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.course} ({self.user})"
