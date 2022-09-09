@@ -164,3 +164,37 @@ SOCIAL_AUTH_GITHUB_SECRET = "ae0f4ba2df322cadb3e083a43ba8f4b279cf4e45"
 # SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+
+LOG_FILE = BASE_DIR / "var" / "log" / "main_log.log"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "console": {"format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"},
+    },
+    "handlers": {
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": LOG_FILE,
+            "formatter": "console",
+        },
+        # вывод в консоль
+        "console": {"class": "logging.StreamHandler", "formatter": "console"},
+    },
+    "loggers": {
+        # без разграничения: вывод в консоль и файл
+        # django": {"level": "INFO", "handlers": ["file", "console"]},
+
+        # разграничение: "django" выводит в консоль "level": "INFO"
+        "django": {"level": "INFO", "handlers": ["console"]},
+
+        # разграничение: "mainapp" выводит в файл "level": "DEBUG"
+        "mainapp": {
+            "level": "DEBUG",
+            "handlers": ["file"],
+        },
+    },
+}
