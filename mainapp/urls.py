@@ -3,6 +3,8 @@ from django.urls import path
 from mainapp import views
 from mainapp.apps import MainappConfig
 
+from django.views.decorators.cache import cache_page
+
 app_name = MainappConfig.name
 
 urlpatterns = [
@@ -24,7 +26,12 @@ urlpatterns = [
         views.NewsDeleteView.as_view(),
         name="news_delete",
     ),
-    path("courses/", views.CoursesListView.as_view(), name="courses"),
+    path(
+        "courses/",
+        # в течении 5-ти минут отображение страницы курсов будет браться из кэша
+        cache_page(60 * 5)(views.CoursesListView.as_view()),
+        name="courses",
+    ),
     path(
         "courses/<int:pk>/",
         views.CoursesDetailView.as_view(),
