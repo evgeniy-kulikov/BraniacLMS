@@ -217,3 +217,9 @@ CACHES = {
         },
     }
 }
+
+# Celery
+# указание на брокер
+CELERY_BROKER_URL = "redis://localhost:6379"
+# указание бэкенда для результатов выполнения задач
+CELERY_RESULT_BACKEND = "redis://localhost:6379"
