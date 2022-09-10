@@ -12,6 +12,8 @@ from mainapp import models as mainapp_models
 import logging
 from django.conf import settings
 
+from django.core.cache import cache
+
 
 # Важно! Требуется делать импорт модуля logging и создавать логгер в начале модуля.
 # Создание объекта логгера (logger) для модуля в качестве глобальной переменной.
@@ -79,10 +81,22 @@ class CoursesDetailView(TemplateView):
             if not mainapp_models.CourseFeedback.objects.filter(
                 course=context["course_object"], user=self.request.user
             ).count():
-                context["feedback_form"] = mainapp_forms.CourseFeedbackForm(course=context["course_object"], user=self.request.user)
-        context["feedback_list"] = mainapp_models.CourseFeedback.objects.filter(
-            course=context["course_object"]
-        ).order_by("-created", "-rating")[:5]
+                context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
+                    course=context["course_object"], user=self.request.user
+                )
+        # Низкоуровневое API для кеширования значений
+        cached_feedback = cache.get(f"feedback_list_{pk}")
+        if not cached_feedback:
+            context["feedback_list"] = (
+                mainapp_models.CourseFeedback.objects.filter(course=context["course_object"])
+                .order_by("-created", "-rating")[:5]
+                # за один запрос забрать связные объекты, благодаря формированию большого запроса
+                .select_related()
+            )
+            cache.set(f"feedback_list_{pk}", context["feedback_list"], timeout=300)  # 5 минут
+        else:
+            context["feedback_list"] = cached_feedback
+
         return context
 
 
