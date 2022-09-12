@@ -9,7 +9,11 @@ app_name = MainappConfig.name
 
 urlpatterns = [
     path("", views.MainPageView.as_view(), name="main_page"),
-    path("news/", views.NewsListView.as_view(), name="news"),
+    path("news/",
+         # views.NewsListView.as_view(),
+         # в течении 5-ти минут отображение страницы овостей будет браться из кэша
+         cache_page(60 * 5)(views.NewsListView.as_view()),
+         name="news"),
     path("news/create/", views.NewsCreateView.as_view(), name="news_create"),
     path(
         "news/<int:pk>/detail",
