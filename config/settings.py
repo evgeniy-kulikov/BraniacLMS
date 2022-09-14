@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -252,3 +253,6 @@ EMAIL_FILE_PATH = "var/email_messages/"
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # # указываем директорию, в которую будут складываться файлы писем
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+
+# указание, где сгенерируются файлы для перевода
+LOCALE_PATHS = [BASE_DIR / "locale"]
