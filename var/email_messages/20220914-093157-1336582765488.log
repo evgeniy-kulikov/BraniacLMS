@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: TechSupport Help
+From: braniac@gmail.com
+To: techsupport@braniac.com
+Date: Wed, 14 Sep 2022 06:31:57 -0000
+Message-ID: <166313711798.1628.2625046302627634264@HOME-BIG>
+
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "var/email_messages/") 
+-------------------------------------------------------------------------------

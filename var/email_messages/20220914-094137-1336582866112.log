@@ -1,0 +1,28 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: TechSupport Help
+From: radmin@root.ru
+To: techsupport@braniac.com
+Date: Wed, 14 Sep 2022 06:41:37 -0000
+Message-ID: <166313769760.1628.1729843976374562051@HOME-BIG>
+
+Установка Celery
+pip install "celery[redis]"
+
+--- Форма отправки сообщения (Отложенные задачи) ---
+# 1 - Запускаем
+redis-server.exe
+
+# 2 - Запуск Celery (если os Linux)
+celery -A config worker -l INFO
+
+# Для работы  в Windows дополнительно устанавливаем пакет Eventlet
+pip install eventlet
+
+# 3 - Запуск Celery при использовании пакета eventlet
+celery -A config worker -l INFO -P eventlet
+
+-------------------------------------------------------------------------------
+выход из Celery:
+Ctrl + C
