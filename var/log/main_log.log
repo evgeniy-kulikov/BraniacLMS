@@ -71,3 +71,7 @@
 [2022-09-15 10:04:19,955] DEBUG mainapp.views (79) log message: open page 'courses_detail.html'
 [2022-09-15 10:22:36,533] DEBUG mainapp.views (79) log message: open page 'courses_detail.html'
 [2022-09-15 10:29:37,840] DEBUG mainapp.views (79) log message: open page 'courses_detail.html'
+[2022-09-15 10:49:22,016] DEBUG mainapp.views (79) log message: open page 'courses_detail.html'
+[2022-09-15 10:51:00,992] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
+[2022-09-15 10:52:07,473] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
+[2022-09-15 11:01:08,153] INFO mainapp.tasks (13) Send message: '{'user_id': 1, 'message': 'test_message_text'}'

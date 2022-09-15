@@ -19,6 +19,7 @@ from django.contrib import messages
 from django.http.response import HttpResponseRedirect
 from django.utils.translation import gettext_lazy as _
 
+import pickle
 
 # Важно! Требуется делать импорт модуля logging и создавать логгер в начале модуля.
 # Создание объекта логгера (logger) для модуля в качестве глобальной переменной.
@@ -101,7 +102,7 @@ class CoursesDetailView(TemplateView):
             cache.set(f"feedback_list_{pk}", context["feedback_list"], timeout=300)  # 5 минут
 
             # Archive object for tests --->
-            import pickle
+            # import pickle
 
             with open(f"mainapp/fixtures/005_feedback_list_{pk}.bin", "wb") as outf:
                 pickle.dump(context["feedback_list"], outf)
