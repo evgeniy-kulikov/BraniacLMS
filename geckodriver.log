@@ -1,0 +1,222 @@
+1663230642007	geckodriver	INFO	Listening on 127.0.0.1:51494
+1663230645086	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51495" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileUWyAMn"
+1663230645417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1663230645418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1663230645418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1663230645418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1663230646811	Marionette	INFO	Listening on port 51500
+1663230647130	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 9060, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9060, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1756, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9060, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1663230833453	Marionette	INFO	Stopped listening on port 51500
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 8652, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+ extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1663230706769	Marionette	INFO	Listening on port 51539
+1663230706810	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 8124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10260, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 8124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1563383129/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1663230827770	Marionette	INFO	Stopped listening on port 51539
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Invalid port. Exiting...
+Invalid port. Exiting...
+Invalid port. Exiting...
+Invalid port. Exiting...
+1663232444961	geckodriver	INFO	Listening on 127.0.0.1:52226
+1663232448017	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52227" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofile7SiBOc"
+1663232450233	geckodriver	INFO	Listening on 127.0.0.1:52234
+1663232453281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52235" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileiO2laN"
+1663232454041	Marionette	INFO	Marionette enabled
+1663232454047	Marionette	INFO	Listening on port 52242
+WebDriver BiDi listening on ws://localhost:52235
+Read port: 52242
+1663232454157	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://browser/content/browser.js, line 8358: NS_ERROR_FILE_NOT_FOUND: 
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileiO2laN\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1663232627251	Marionette	INFO	Stopped listening on port 52242
+1663232627253	CDP	WARN	Failed to remove undefined (Could not parse path (undefined): NS_ERROR_FILE_UNRECOGNIZED_PATH)
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2270: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+!!! error running onStopped callback: TypeError: callback is not a function
+1663232681121	geckodriver	INFO	Listening on 127.0.0.1:52352
+1663232684199	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52353" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileT3PlEP"
+1663232684518	Marionette	INFO	Marionette enabled
+1663232684522	Marionette	INFO	Listening on port 52362
+WebDriver BiDi listening on ws://localhost:52353
+Read port: 52362
+1663232684612	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileT3PlEP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52353/devtools/browser/7c3a03b1-c910-4c8b-889f-d3bc42845b8c
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52351."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52351."
+1663232798780	Marionette	INFO	Stopped listening on port 52362
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1663232798809	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.js :: allowAllCerts.disable :: line 57"  data: no] Stack trace: allowAllCerts.disable()@cert.js:57
+destroy()@Session.jsm:206
+deleteSession()@WebDriverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+console.warn: TopSitesFeed: Failed console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52351."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52351."
+1663232813931	Marionette	INFO	Stopped listening on port 52398
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 57: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1663232813979	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.js :: allowAllCerts.disable :: line 57"  data: no] Stack trace: allowAllCerts.disable()@cert.js:57
+destroy()@Session.jsm:206
+deleteSession()@WebDriverBiDi.jsm:148
+stop()@WebDriverBiDi.jsm:227
+observe()@resource://gre/modules/AsyncShutdown.jsm:576
+1663233817807	geckodriver	INFO	Listening on 127.0.0.1:52527
+1663233820852	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52528" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileiyvEBf"
+1663233821185	Marionette	INFO	Marionette enabled
+1663233821189	Marionette	INFO	Listening on port 52537
+WebDriver BiDi listening on ws://localhost:52528
+Read port: 52537
+1663233821423	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileiyvEBf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52528/devtools/browser/3ae605bd-3da7-48a6-9d05-64391f231a0f
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52526."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52526."
+1663233846111	Marionette	INFO	Stopped listening on port 52537
+!!! error running onStopped callback: TypeError: callback is not a function
+1663233856922	geckodriver	INFO	Listening on 127.0.0.1:52565
+1663233859970	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52566" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileF238t9"
+1663233860283	Marionette	INFO	Marionette enabled
+1663233860287	Marionette	INFO	Listening on port 52575
+WebDriver BiDi listening on ws://localhost:52566
+Read port: 52575
+1663233860375	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileF238t9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52566/devtools/browser/5e001d9e-22b5-4067-84f1-958f470ffd86
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52526."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52526."
+1663233888555	Marionette	INFO	Stopped listening on port 52575
+!!! error running onStopped callback: TypeError: callback is not a function
+1663234087520	geckodriver	INFO	Listening on 127.0.0.1:52609
+1663234090573	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52610" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileddDmN6"
+1663234090888	Marionette	INFO	Marionette enabled
+1663234090891	Marionette	INFO	Listening on port 52619
+WebDriver BiDi listening on ws://localhost:52610
+Read port: 52619
+1663234090980	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileddDmN6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52610/devtools/browser/be98271c-17e7-45ed-aa07-90e967cc73cf
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1663234668913	Marionette	INFO	Stopped listening on port 52619
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "52645" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileqPPXQj"
+1663234117587	Marionette	INFO	Marionette enabled
+1663234117592	Marionette	INFO	Listening on port 52655
+WebDriver BiDi listening on ws://localhost:52645
+Read port: 52655
+1663234117683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileqPPXQj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52645/devtools/browser/fb4cd623-421d-48f6-9634-7745d7938c0d
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1663234669942	Marionette	INFO	Stopped listening on port 52655
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663234966982	geckodriver	INFO	Listening on 127.0.0.1:52794
+1663234970048	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52795" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofilehs0tIf"
+1663234970367	Marionette	INFO	Marionette enabled
+1663234970371	Marionette	INFO	Listening on port 52804
+WebDriver BiDi listening on ws://localhost:52795
+Read port: 52804
+1663234970462	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofilehs0tIf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52795/devtools/browser/2a1af043-bd13-4e2d-8cd0-9901b1290465
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1663237687426	Marionette	INFO	Stopped listening on port 52804
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileCR7ikK"
+1663234997503	Marionette	INFO	Marionette enabled
+1663234997508	Marionette	INFO	Listening on port 52840
+WebDriver BiDi listening on ws://localhost:52830
+Read port: 52840
+1663234997597	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileCR7ikK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52830/devtools/browser/c50629e9-dfe4-40a9-8822-9f6eaeb5b401
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1663237683894	Marionette	INFO	Stopped listening on port 52840
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileM62vGH"
+1663235385929	Marionette	INFO	Marionette enabled
+1663235385933	Marionette	INFO	Listening on port 52994
+WebDriver BiDi listening on ws://localhost:52984
+Read port: 52994
+1663235386028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileM62vGH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52984/devtools/browser/f9bd3b60-664c-4bb5-becd-45d7e7071e09
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52982."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52982."
+1663235410113	Marionette	INFO	Stopped listening on port 52994
+[Parent 8612, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1663235410835	geckodriver	INFO	Listening on 127.0.0.1:53022
+1663235413894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53023" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileJ8kQiG"
+1663235414203	Marionette	INFO	Marionette enabled
+1663235414207	Marionette	INFO	Listening on port 53032
+WebDriver BiDi listening on ws://localhost:53023
+Read port: 53032
+1663235414293	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileJ8kQiG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53023/devtools/browser/3a280272-f912-4112-8ff7-7f7a747c03c7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52982."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:52982."
+1663235456508	Marionette	INFO	Stopped listening on port 53032
+!!! error running onStopped callback: TypeError: callback is not a function
+[Parent 8416, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+1663236880884	geckodriver	INFO	Listening on 127.0.0.1:53089
+1663236883959	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53090" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileTA6KQ2"
+1663236884266	Marionette	INFO	Marionette enabled
+1663236884270	Marionette	INFO	Listening on port 53099
+WebDriver BiDi listening on ws://localhost:53090
+Read port: 53099
+1663236884355	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofileTA6KQ2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53090/devtools/browser/3cdf862e-653e-448d-9df2-521f1a948323
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:53088."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:53088."
+1663236918871	Marionette	INFO	Stopped listening on port 53099
+!!! error running onStopped callback: TypeError: callback is not a function
+1663236919958	geckodriver	INFO	Listening on 127.0.0.1:53128
+1663236923035	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53129" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofilevGKH8L"
+1663236923357	Marionette	INFO	Marionette enabled
+1663236923361	Marionette	INFO	Listening on port 53139
+WebDriver BiDi listening on ws://localhost:53129
+Read port: 53139
+1663236923448	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HOMEPC~1\\AppData\\Local\\Temp\\rust_mozprofilevGKH8L\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53129/devtools/browser/1a473f96-4af2-45c0-a198-89bcec8479e0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:53088."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:53088."
+1663236952792	Marionette	INFO	Stopped listening on port 53139
+!!! error running onStopped callback: TypeError: callback is not a function
