@@ -170,8 +170,10 @@ class TestNewsSelenium(StaticLiveServerTestCase):
         button_enter = WebDriverWait(self.selenium, 5).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, '[type="submit"]'))
         )
-        self.selenium.find_element_by_id("id_username").send_keys("admin")
-        self.selenium.find_element_by_id("id_password").send_keys("admin")
+        # self.selenium.find_element_by_id("id_username").send_keys("admin")
+        # self.selenium.find_element_by_id("id_password").send_keys("admin")
+        self.selenium.find_element("id", "id_username").send_keys("admin")
+        self.selenium.find_element("id", "id_password").send_keys("admin")
         button_enter.click()
         # Wait for footer
         WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.CLASS_NAME, "mt-auto")))
@@ -181,7 +183,8 @@ class TestNewsSelenium(StaticLiveServerTestCase):
         path_add = reverse("mainapp:news_create")
         self.selenium.get(path_list)
         button_create = WebDriverWait(self.selenium, 5).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, f'[href="{path_add}"]'))
+            EC.visibility_of_element_located((By.ID, "id_title111"))
+            # EC.visibility_of_element_located((By.CSS_SELECTOR, f'[href="{path_add}"]'))
         )
         print("Trying to click button ...")
         button_create.click()  # Test that button clickable
