@@ -256,3 +256,10 @@ EMAIL_FILE_PATH = "var/email_messages/"
 
 # указание, где сгенерируются файлы для перевода
 LOCALE_PATHS = [BASE_DIR / "locale"]
+
+# #  путь к ChromeDriver
+# SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "chromedriver"
+
+#  путь к geckodriver
+SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "geckodriver"
+
