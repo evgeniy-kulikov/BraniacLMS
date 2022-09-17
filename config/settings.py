@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# ENV_TYPE = os.getenv('ENV_TYPE', 'prod')
+
 if DEBUG:
     INTERNAL_IPS = [
         "192.168.1.4",
@@ -95,6 +97,24 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# # Database
+# # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# if ENV_TYPE == 'local':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'lms',
+#             'USER': 'postgres'
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -262,4 +282,3 @@ LOCALE_PATHS = [BASE_DIR / "locale"]
 
 #  путь к geckodriver
 SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "geckodriver"
-
