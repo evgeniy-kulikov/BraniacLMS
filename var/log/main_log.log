@@ -104,3 +104,5 @@
 [2022-09-15 13:37:47,699] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
 [2022-09-15 13:38:32,521] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
 [2022-09-16 18:18:38,657] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
+[2022-09-19 17:12:40,978] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
+[2022-09-20 16:25:06,829] DEBUG mainapp.views (80) log message: open page 'courses_detail.html'
