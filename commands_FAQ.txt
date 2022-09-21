@@ -1,0 +1,258 @@
+# создание виртуального окружения:
+python3 -m venv venv
+
+или
+
+python3 -m venv venv --without-pip --system-site-packages
+
+# активация виртуального окружения
+source ./venv/bin/activate
+
+# запуск сайта на локальном сервере:
+
+cd /имя папки/
+cd ./имя папки/
+python3 -m http.server 8000
+
+----------------------------------------------------------
+# версия python
+python3 --version
+----------------------------------------------------------
+# Установка пакета создания виртуального окружения
+sudo apt install python3-virtualenv
+
+
+# Создание виртуального окружения:
+virtualenv -p python3 venv
+
+# Активация виртуального окружения:
+source ./venv/bin/activate
+
+# запись установленных бибилиотек в файл
+pip freeze > requirements.txt
+
+# установка бибилиотек из файла
+pip install -r reaquirements.txt
+
+
+# Запуск сервера из стандартной библиотеки:
+python -m http.server 8000
+
+python manage.py runserver
+
+# Остановить сервер:
+Ctl + C
+
+# форматировать документ в PyCharm
+strl + alt + l
+
+# создание миграции
+python manage.py makemigrations
+
+# Для применения миграций
+python manage.py migrate
+
+++++++++++++++++++++++++++++++++++
+# подключаться к командной оболочке базы данных
+python manage.py shell
+++++++++++++++++++++++++++++++++++
+
+# далее подключаемся к классу (таблице) News
+from mainapp.models import News
+
+# заполняем поля (создаем объект "new" класса "News")
+new = News(title='Новость номер 1', preambule='bla-bla-bla', body='abracadabra')
+
+# сохраняем объект "new" (записываем строку в таблицу "News")
+new.save()
+
+# обращение к объекту "new" (строки в таблице "News")
+new.id
+new.pk   (то же самое)
+
+new1 = News(title='Новость номер 2', preambule='return news', body='go to the home')
+
+
+# получить все объекты класса
+news = News.objects.all()
+for n in news:
+    print(n)
+
+# Фильтрация
+news = News.objects.filter(title="Новость номер 2")
+
+print(news.query)
+
+
+#Получение списка значений
+new_list = News.objects.values_list("title")
+new_list
+
++++++++++++++++++++++++++++++++++
+выход из режима командной оболочке базы данных
+exit()
++++++++++++++++++++++++++++++++++
+
+# выгрузка данных из базы
+python manage.py dumpdata mainapp.News > mainapp/fixtures/001_news_copy.json
+python manage.py dumpdata mainapp.News > mainapp/fixtures/002_courses_copy.json
+python manage.py dumpdata mainapp.News > mainapp/fixtures/003_lessons_copy.json
+python manage.py dumpdata mainapp.News > mainapp/fixtures/004_teachers_copy.json
+
+
+# загрузить данные из файла *.json в  базу данных (существующие данные при этом перезапишутся)
+
+python manage.py  loaddata 001_news.json
+python manage.py  loaddata 002_courses.json
+python manage.py  loaddata 003_lessons.json
+python manage.py  loaddata 004_teachers.json
+
+# Для создания миграции
+# Команда читается так:
+# создать пустой файл миграции с именем data_migration в приложении mainapp
+
+python manage.py makemigrations --empty  --name empty_migration mainapp
+python manage.py makemigrations --empty  --name other_migration mainapp
+
+
+# Для создания миграции
+# Команда читается так:
+# создать файл миграции с именем data_migration в приложении mainapp
+
+python manage.py makemigrations  --name backup_20220901
+
+
+# Откат миграций
+# Команда читается так:
+#произвести процедуру миграции для приложения mainapp до состояния на момент применения 0001_initial
+
+python manage.py migrate mainapp 001_initial
+
+
+# создание суперпользователя
+python manage.py createsuperuser
+
+rootadmin
+radmin@root.ru
+qwerty
+
+
+# Установка пакета для стилизации форм
+pip install django-crispy-forms
+
+
+---Кэш---
+# Для реализации кеш-системы с использованием бэкенда через Redis устанавливается дополнительный пакет:
+pip install django-redis
+
+========================================================================================================================
+
+Установка Celery
+pip install "celery[redis]"
+
+--- Форма отправки сообщения (Отложенные задачи) ---
+# 1 - Запускаем
+redis-server.exe
+
+
+# 2 - Запуск Celery (если os Linux)
+celery -A config worker -l INFO
+
+# Для работы  в Windows дополнительно устанавливаем пакет Eventlet
+pip install eventlet
+
+# 3 - Запуск Celery при использовании пакета eventlet
+celery -A config worker -l INFO -P eventlet
+
+========================================================================================================================
+
+Интернационализация
+
+в операционной системе проверяется поддержка русской локали. Команда:
+locale -a | grep ru
+
+утилита gettext. Скачать:
+gettext 0.21 and iconv 1.16 - Binaries for Windows (Flavor=static)
+https://mlocati.github.io/articles/gettext-iconv-windows.html
+
+# сделать перевод в файлах
+django-admin makemessages -l ru
+
+
+# Команда для компиляция файла локали
+django-admin compilemessages
+
+========================================================================================================================
+
+# Запуск тестов выполняется командой:
+python manage.py test
+
+
+# Запуск одного теста:
+python manage.py test mainapp.tests.TestMainPage.test_page_open
+
+python manage.py test mainapp.tests.TestCoursesWithMock.test_page_open_detail
+
+python manage.py test mainapp.tests.TestTaskMailSend.test_mail_send
+
+python manage.py test mainapp.tests.TestTaskMailSend.test_create_button_clickable
+python manage.py test mainapp.tests.TestTaskMailSend.test_pick_color
+
+
+# тестирование вызовов различных функций из браузера - применяются инструменты автоматизации.
+# Один из них — Selenium
+pip install selenium
+
+
+========================================================================================================================
+Lesson 09 HOSTING
+
+# Установка переменной окружения для файла конфигурации config/settings.py
+export DJANGO_SETTINGS_MODULE="config.settings"
+
+# Проверка наличия переменной окружения
+env | grep DJANGO_SETTINGS_MODULE
+
+# Перенос зависимостей
+pip freeze > reaquirements.txt
+
+
+========================================================================================================================
+
+
+
+========================================================================================================================
+                                                Пользователи
+========================================================================================================================
+# суперпользователь
+rootadmin
+radmin@root.ru
+qwerty
+
+# модератор
+admin
+45tgbnm
+Root
+User
+50
+braniac@gmail.com
+
+
+# обычный пользователь
+User
+qwerty
+Second
+User
+50
+lms@gmail.com
+
+
+
+GitHub
+redstepway@gmail.com
+Street19J23enya67gh
+evgeniy-kulikov
+
+http://127.0.0.1:8000/
+
+
